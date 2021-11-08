@@ -17,60 +17,51 @@ class _WebviewWidgetState extends State<WebviewWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return StreamBuilder<List<PostPdfRecord>>(
-      stream: queryPostPdfRecord(),
-      builder: (context, snapshot) {
-        // Customize what your widget looks like when it's loading.
-        if (!snapshot.hasData) {
-          return Center(
-            child: SizedBox(
-              width: 50,
-              height: 50,
-              child: CircularProgressIndicator(
-                color: FlutterFlowTheme.primaryColor,
-              ),
-            ),
-          );
-        }
-        List<PostPdfRecord> webviewPostPdfRecordList = snapshot.data;
-        return Scaffold(
-          key: scaffoldKey,
-          appBar: AppBar(
-            backgroundColor: FlutterFlowTheme.primaryColor,
-            automaticallyImplyLeading: true,
-            actions: [],
-            centerTitle: true,
-            elevation: 4,
+    return Scaffold(
+      key: scaffoldKey,
+      appBar: AppBar(
+        backgroundColor: FlutterFlowTheme.primaryColor,
+        automaticallyImplyLeading: true,
+        actions: [],
+        centerTitle: true,
+        elevation: 4,
+      ),
+      backgroundColor: Color(0xFFF5F5F5),
+      body: SafeArea(
+        child: StreamBuilder<List<PostPdfRecord>>(
+          stream: queryPostPdfRecord(
+            singleRecord: true,
           ),
-          backgroundColor: Color(0xFFF5F5F5),
-          body: SafeArea(
-            child: StreamBuilder<List<PostPdfRecord>>(
-              stream: queryPostPdfRecord(),
-              builder: (context, snapshot) {
-                // Customize what your widget looks like when it's loading.
-                if (!snapshot.hasData) {
-                  return Center(
-                    child: SizedBox(
-                      width: 50,
-                      height: 50,
-                      child: CircularProgressIndicator(
-                        color: FlutterFlowTheme.primaryColor,
-                      ),
-                    ),
-                  );
-                }
-                List<PostPdfRecord> webViewPostPdfRecordList = snapshot.data;
-                return FlutterFlowWebView(
-                  url: webviewPostPdfRecordList.length,
-                  bypass: false,
-                  verticalScroll: false,
-                  horizontalScroll: false,
-                );
-              },
-            ),
-          ),
-        );
-      },
+          builder: (context, snapshot) {
+            // Customize what your widget looks like when it's loading.
+            if (!snapshot.hasData) {
+              return Center(
+                child: SizedBox(
+                  width: 50,
+                  height: 50,
+                  child: CircularProgressIndicator(
+                    color: FlutterFlowTheme.primaryColor,
+                  ),
+                ),
+              );
+            }
+            List<PostPdfRecord> webViewPostPdfRecordList = snapshot.data;
+            // Return an empty Container when the document does not exist.
+            if (snapshot.data.isEmpty) {
+              return Container();
+            }
+            final webViewPostPdfRecord = webViewPostPdfRecordList.isNotEmpty
+                ? webViewPostPdfRecordList.first
+                : null;
+            return FlutterFlowWebView(
+              url: webViewPostPdfRecord.url,
+              bypass: false,
+              verticalScroll: false,
+              horizontalScroll: false,
+            );
+          },
+        ),
+      ),
     );
   }
 }

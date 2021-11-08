@@ -11,20 +11,25 @@ abstract class PostPdfRecord
   static Serializer<PostPdfRecord> get serializer => _$postPdfRecordSerializer;
 
   @nullable
+  @BuiltValueField(wireName: 'created_time')
+  BuiltList<DateTime> get createdTime;
+
+  @nullable
   @BuiltValueField(wireName: 'Name_pdf')
-  BuiltList<String> get namePdf;
+  String get namePdf;
 
   @nullable
   @BuiltValueField(wireName: 'Url')
-  BuiltList<DocumentReference> get url;
+  String get url;
 
   @nullable
   @BuiltValueField(wireName: kDocumentReferenceField)
   DocumentReference get reference;
 
   static void _initializeBuilder(PostPdfRecordBuilder builder) => builder
-    ..namePdf = ListBuilder()
-    ..url = ListBuilder();
+    ..createdTime = ListBuilder()
+    ..namePdf = ''
+    ..url = '';
 
   static CollectionReference get collection =>
       FirebaseFirestore.instance.collection('post_pdf');
@@ -43,8 +48,13 @@ abstract class PostPdfRecord
           {...mapFromFirestore(data), kDocumentReferenceField: reference});
 }
 
-Map<String, dynamic> createPostPdfRecordData() => serializers.toFirestore(
-    PostPdfRecord.serializer,
-    PostPdfRecord((p) => p
-      ..namePdf = null
-      ..url = null));
+Map<String, dynamic> createPostPdfRecordData({
+  String namePdf,
+  String url,
+}) =>
+    serializers.toFirestore(
+        PostPdfRecord.serializer,
+        PostPdfRecord((p) => p
+          ..createdTime = null
+          ..namePdf = namePdf
+          ..url = url));

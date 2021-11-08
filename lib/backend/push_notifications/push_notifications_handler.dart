@@ -8,7 +8,6 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 
 import '../../main.dart';
-import '../../home_page/home_page_widget.dart';
 import '../../professiy/professiy_widget.dart';
 import '../../operator/operator_widget.dart';
 import '../../spisok/spisok_widget.dart';
@@ -79,7 +78,6 @@ class _PushNotificationsHandlerState extends State<PushNotificationsHandler> {
 }
 
 final pageBuilderMap = <String, Future<Widget> Function(Map<String, dynamic>)>{
-  'HomePage': (data) async => HomePageWidget(),
   'Professiy': (data) async => ProfessiyWidget(),
   'Operator': (data) async => OperatorWidget(),
   'Spisok': (data) async => SpisokWidget(),
