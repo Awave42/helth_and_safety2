@@ -1,48 +1,40 @@
 {
   "project_info": {
-    "project_number": "204492643808",
-    "project_id": "ohranatruda-192cb",
-    "storage_bucket": "ohranatruda-192cb.appspot.com"
+    "project_number": "935495206929",
+    "project_id": "health-and-safety-102",
+    "storage_bucket": "health-and-safety-102.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:204492643808:android:22d2ed1af46762e3559f85",
+        "mobilesdk_app_id": "1:935495206929:android:724483c73a244911b749b0",
         "android_client_info": {
           "package_name": "com.flutterflow.ohranatruda2"
         }
       },
       "oauth_client": [
         {
-          "client_id": "204492643808-085piosdacmimqba9rh3iop7gqd342n9.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.flutterflow.ohranatruda2",
-            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
-          }
-        },
-        {
-          "client_id": "204492643808-npjsepfaovhad0un6i7lk75u547vlgcn.apps.googleusercontent.com",
+          "client_id": "935495206929-p8vhphbn2vns1ca6s43rvic604v3mv6t.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDncllK3JZCyhZ53Kf4H1t6MymHkGdIGiE"
+          "current_key": "AIzaSyDrOz0wDdEYXrvmuqJDIn2jlxkSJyU8FOA"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "204492643808-npjsepfaovhad0un6i7lk75u547vlgcn.apps.googleusercontent.com",
+              "client_id": "935495206929-p8vhphbn2vns1ca6s43rvic604v3mv6t.apps.googleusercontent.com",
               "client_type": 3
             },
             {
-              "client_id": "204492643808-8s74p1vk8e10bkajmeipglebv3t8s9nu.apps.googleusercontent.com",
+              "client_id": "935495206929-154i33454qee9p2hth10uhiq1j4quhh3.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.flutterflow.ohranatruda2"
+                "bundle_id": "com.moskovets.ohranatruda2"
               }
             }
           ]

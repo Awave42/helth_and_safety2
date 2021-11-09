@@ -3,23 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>204492643808-8s74p1vk8e10bkajmeipglebv3t8s9nu.apps.googleusercontent.com</string>
+	<string>935495206929-2p4jclu4nf7cqb77m7a0sasaapbh0lh7.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.204492643808-8s74p1vk8e10bkajmeipglebv3t8s9nu</string>
+	<string>com.googleusercontent.apps.935495206929-2p4jclu4nf7cqb77m7a0sasaapbh0lh7</string>
 	<key>ANDROID_CLIENT_ID</key>
-	<string>204492643808-085piosdacmimqba9rh3iop7gqd342n9.apps.googleusercontent.com</string>
+	<string>935495206929-3fj44gvgubmifg792tm9fbioqgqgfp94.apps.googleusercontent.com</string>
 	<key>API_KEY</key>
-	<string>AIzaSyA4Qu0drXFAFFL1qTbQqTtr76yTZZvS-UU</string>
+	<string>AIzaSyCc4EkePbeKRQLF1tR-GkxgTCUU-2jyzWI</string>
 	<key>GCM_SENDER_ID</key>
-	<string>204492643808</string>
+	<string>935495206929</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.flutterflow.ohranatruda2</string>
 	<key>PROJECT_ID</key>
-	<string>ohranatruda-192cb</string>
+	<string>health-and-safety-102</string>
 	<key>STORAGE_BUCKET</key>
-	<string>ohranatruda-192cb.appspot.com</string>
+	<string>health-and-safety-102.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -31,6 +31,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:204492643808:ios:ffc378b8d9bc6bf1559f85</string>
+	<string>1:935495206929:ios:3323bc30d3be18d8b749b0</string>
 </dict>
 </plist>
