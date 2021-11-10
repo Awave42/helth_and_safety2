@@ -6,7 +6,7 @@ import 'auth/firebase_user_provider.dart';
 import 'auth/auth_util.dart';
 import 'backend/push_notifications/push_notifications_util.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
-import 'package:ohrana_truda_2/home_page/home_page_widget.dart';
+import 'package:ohrana_truda_2/sign/sign_widget.dart';
 import 'package:ohrana_truda_2/home_page/home_page_widget.dart';
 import 'flutter_flow/flutter_flow_theme.dart';
 
@@ -54,18 +54,18 @@ class _MyAppState extends State<MyApp> {
       supportedLocales: const [Locale('en', '')],
       theme: ThemeData(primarySwatch: Colors.blue),
       home: initialUser == null
-          ? const Center(
-              child: SizedBox(
-                width: 50,
-                height: 50,
-                child: CircularProgressIndicator(
-                  color: FlutterFlowTheme.primaryColor,
+          ? Container(
+              color: Colors.transparent,
+              child: Builder(
+                builder: (context) => Image.asset(
+                  'assets/images/ohrana-truda-big.png',
+                  fit: BoxFit.contain,
                 ),
               ),
             )
           : currentUser.loggedIn
               ? PushNotificationsHandler(child: HomePageWidget())
-              : HomePageWidget(),
+              : SignWidget(),
     );
   }
 }

@@ -8,10 +8,15 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 
 import '../../main.dart';
+import '../../login/login_widget.dart';
 import '../../professiy/professiy_widget.dart';
 import '../../operator/operator_widget.dart';
 import '../../spisok/spisok_widget.dart';
+import '../../pot0/pot0_widget.dart';
+import '../../iot_1/iot1_widget.dart';
+import '../../spisok_copy/spisok_copy_widget.dart';
 import '../../webview/webview_widget.dart';
+import '../../sign/sign_widget.dart';
 
 class PushNotificationsHandler extends StatefulWidget {
   const PushNotificationsHandler(
@@ -65,12 +70,12 @@ class _PushNotificationsHandlerState extends State<PushNotificationsHandler> {
 
   @override
   Widget build(BuildContext context) => _loading
-      ? const Center(
-          child: SizedBox(
-            width: 50,
-            height: 50,
-            child: CircularProgressIndicator(
-              color: FlutterFlowTheme.primaryColor,
+      ? Container(
+          color: Colors.transparent,
+          child: Builder(
+            builder: (context) => Image.asset(
+              'assets/images/ohrana-truda-big.png',
+              fit: BoxFit.contain,
             ),
           ),
         )
@@ -78,10 +83,15 @@ class _PushNotificationsHandlerState extends State<PushNotificationsHandler> {
 }
 
 final pageBuilderMap = <String, Future<Widget> Function(Map<String, dynamic>)>{
+  'login': (data) async => LoginWidget(),
   'Professiy': (data) async => ProfessiyWidget(),
   'Operator': (data) async => OperatorWidget(),
-  'Spisok': (data) async => SpisokWidget(),
+  'spisok': (data) async => SpisokWidget(),
+  'pot0': (data) async => Pot0Widget(),
+  'iot_1': (data) async => Iot1Widget(),
+  'spisokCopy': (data) async => SpisokCopyWidget(),
   'webview': (data) async => WebviewWidget(),
+  'Sign': (data) async => SignWidget(),
 };
 
 bool hasMatchingParameters(Map<String, dynamic> data, Set<String> params) =>

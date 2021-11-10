@@ -29,9 +29,7 @@ class _WebviewWidgetState extends State<WebviewWidget> {
       backgroundColor: Color(0xFFF5F5F5),
       body: SafeArea(
         child: StreamBuilder<List<PostPdfRecord>>(
-          stream: queryPostPdfRecord(
-            singleRecord: true,
-          ),
+          stream: queryPostPdfRecord(),
           builder: (context, snapshot) {
             // Customize what your widget looks like when it's loading.
             if (!snapshot.hasData) {
@@ -46,15 +44,8 @@ class _WebviewWidgetState extends State<WebviewWidget> {
               );
             }
             List<PostPdfRecord> webViewPostPdfRecordList = snapshot.data;
-            // Return an empty Container when the document does not exist.
-            if (snapshot.data.isEmpty) {
-              return Container();
-            }
-            final webViewPostPdfRecord = webViewPostPdfRecordList.isNotEmpty
-                ? webViewPostPdfRecordList.first
-                : null;
             return FlutterFlowWebView(
-              url: webViewPostPdfRecord.url,
+              url: 'https://flutter.dev',
               bypass: false,
               verticalScroll: false,
               horizontalScroll: false,
