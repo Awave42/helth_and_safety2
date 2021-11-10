@@ -14,7 +14,7 @@ class SignWidget extends StatefulWidget {
 }
 
 class _SignWidgetState extends State<SignWidget> {
-  TextEditingController emailAddressController;
+  TextEditingController emailssController;
   TextEditingController passwordController;
   bool passwordVisibility;
   TextEditingController passwordtoController;
@@ -26,7 +26,7 @@ class _SignWidgetState extends State<SignWidget> {
   @override
   void initState() {
     super.initState();
-    emailAddressController = TextEditingController();
+    emailssController = TextEditingController();
     passwordController = TextEditingController();
     passwordVisibility = false;
     passwordtoController = TextEditingController();
@@ -137,60 +137,51 @@ class _SignWidgetState extends State<SignWidget> {
                             ],
                           ),
                         ),
-                        Visibility(
-                          visible: currentUserEmailVerified ?? true,
-                          child: Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(20, 20, 20, 0),
-                            child: AuthUserStreamWidget(
-                              child: TextFormField(
-                                controller: emailAddressController,
-                                obscureText: false,
-                                decoration: InputDecoration(
-                                  labelText: 'Email Address',
-                                  labelStyle:
-                                      FlutterFlowTheme.bodyText1.override(
-                                    fontFamily: 'Lexend Deca',
-                                    color: Color(0x98FFFFFF),
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.normal,
-                                  ),
-                                  hintText: 'Enter your email...',
-                                  hintStyle:
-                                      FlutterFlowTheme.bodyText1.override(
-                                    fontFamily: 'Lexend Deca',
-                                    color: Color(0x98FFFFFF),
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.normal,
-                                  ),
-                                  enabledBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      color: Color(0x00000000),
-                                      width: 1,
-                                    ),
-                                    borderRadius: BorderRadius.circular(8),
-                                  ),
-                                  focusedBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      color: Color(0x00000000),
-                                      width: 1,
-                                    ),
-                                    borderRadius: BorderRadius.circular(8),
-                                  ),
-                                  filled: true,
-                                  fillColor: Color(0xFF3124A1),
-                                  contentPadding:
-                                      EdgeInsetsDirectional.fromSTEB(
-                                          20, 24, 20, 24),
-                                ),
-                                style: FlutterFlowTheme.bodyText1.override(
-                                  fontFamily: 'Lexend Deca',
-                                  color: Colors.white,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.normal,
-                                ),
-                                keyboardType: TextInputType.emailAddress,
+                        Padding(
+                          padding:
+                              EdgeInsetsDirectional.fromSTEB(20, 12, 20, 0),
+                          child: TextFormField(
+                            controller: emailssController,
+                            obscureText: false,
+                            decoration: InputDecoration(
+                              labelText: 'email 2',
+                              labelStyle: FlutterFlowTheme.bodyText1.override(
+                                fontFamily: 'Lexend Deca',
+                                color: Color(0x98FFFFFF),
+                                fontSize: 14,
+                                fontWeight: FontWeight.normal,
                               ),
+                              hintText: 'Enter your email...',
+                              hintStyle: FlutterFlowTheme.bodyText1.override(
+                                fontFamily: 'Lexend Deca',
+                                color: Color(0x98FFFFFF),
+                                fontSize: 14,
+                                fontWeight: FontWeight.normal,
+                              ),
+                              enabledBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Color(0x00000000),
+                                  width: 1,
+                                ),
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Color(0x00000000),
+                                  width: 1,
+                                ),
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              filled: true,
+                              fillColor: Color(0xFF3124A1),
+                              contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                  20, 24, 20, 24),
+                            ),
+                            style: FlutterFlowTheme.bodyText1.override(
+                              fontFamily: 'Lexend Deca',
+                              color: Colors.white,
+                              fontSize: 14,
+                              fontWeight: FontWeight.normal,
                             ),
                           ),
                         ),
@@ -336,7 +327,7 @@ class _SignWidgetState extends State<SignWidget> {
 
                                 final user = await createAccountWithEmail(
                                   context,
-                                  emailAddressController.text,
+                                  emailssController.text,
                                   passwordController.text,
                                 );
                                 if (user == null) {
