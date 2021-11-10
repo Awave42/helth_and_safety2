@@ -189,6 +189,7 @@ class _SignWidgetState extends State<SignWidget> {
                                   fontSize: 14,
                                   fontWeight: FontWeight.normal,
                                 ),
+                                keyboardType: TextInputType.emailAddress,
                               ),
                             ),
                           ),
