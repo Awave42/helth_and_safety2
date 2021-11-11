@@ -32,8 +32,8 @@ class _SpisokCopyWidgetState extends State<SpisokCopyWidget> {
             mainAxisSize: MainAxisSize.max,
             children: [
               Expanded(
-                child: StreamBuilder<List<UsersRecord>>(
-                  stream: queryUsersRecord(),
+                child: StreamBuilder<List<PostPdfRecord>>(
+                  stream: queryPostPdfRecord(),
                   builder: (context, snapshot) {
                     // Customize what your widget looks like when it's loading.
                     if (!snapshot.hasData) {
@@ -47,14 +47,15 @@ class _SpisokCopyWidgetState extends State<SpisokCopyWidget> {
                         ),
                       );
                     }
-                    List<UsersRecord> listViewUsersRecordList = snapshot.data;
+                    List<PostPdfRecord> listViewPostPdfRecordList =
+                        snapshot.data;
                     return ListView.builder(
                       padding: EdgeInsets.zero,
                       scrollDirection: Axis.vertical,
-                      itemCount: listViewUsersRecordList.length,
+                      itemCount: listViewPostPdfRecordList.length,
                       itemBuilder: (context, listViewIndex) {
-                        final listViewUsersRecord =
-                            listViewUsersRecordList[listViewIndex];
+                        final listViewPostPdfRecord =
+                            listViewPostPdfRecordList[listViewIndex];
                         return Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 5),
                           child: Card(
@@ -71,7 +72,7 @@ class _SpisokCopyWidgetState extends State<SpisokCopyWidget> {
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             5, 10, 0, 10),
                                         child: Text(
-                                          listViewUsersRecord.email,
+                                          listViewPostPdfRecord.namePdf,
                                           textAlign: TextAlign.start,
                                           style: FlutterFlowTheme.bodyText1,
                                         ),
