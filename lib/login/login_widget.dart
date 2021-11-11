@@ -2,7 +2,7 @@ import '../auth/auth_util.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
-import '../professiy/professiy_widget.dart';
+import '../home_page/home_page_widget.dart';
 import '../sign/sign_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -292,7 +292,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                 await Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => ProfessiyWidget(),
+                                    builder: (context) => HomePageWidget(),
                                   ),
                                 );
                               } finally {

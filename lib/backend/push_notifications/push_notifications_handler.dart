@@ -9,6 +9,7 @@ import 'package:flutter/material.dart';
 
 import '../../main.dart';
 import '../../login/login_widget.dart';
+import '../../home_page/home_page_widget.dart';
 import '../../professiy/professiy_widget.dart';
 import '../../operator/operator_widget.dart';
 import '../../spisok/spisok_widget.dart';
@@ -16,7 +17,6 @@ import '../../pot0/pot0_widget.dart';
 import '../../iot_1/iot1_widget.dart';
 import '../../spisok_copy/spisok_copy_widget.dart';
 import '../../webview/webview_widget.dart';
-import '../../sign/sign_widget.dart';
 
 class PushNotificationsHandler extends StatefulWidget {
   const PushNotificationsHandler(
@@ -84,6 +84,7 @@ class _PushNotificationsHandlerState extends State<PushNotificationsHandler> {
 
 final pageBuilderMap = <String, Future<Widget> Function(Map<String, dynamic>)>{
   'login': (data) async => LoginWidget(),
+  'HomePage': (data) async => HomePageWidget(),
   'Professiy': (data) async => ProfessiyWidget(),
   'Operator': (data) async => OperatorWidget(),
   'spisok': (data) async => SpisokWidget(),
@@ -91,7 +92,6 @@ final pageBuilderMap = <String, Future<Widget> Function(Map<String, dynamic>)>{
   'iot_1': (data) async => Iot1Widget(),
   'spisokCopy': (data) async => SpisokCopyWidget(),
   'webview': (data) async => WebviewWidget(),
-  'Sign': (data) async => SignWidget(),
 };
 
 bool hasMatchingParameters(Map<String, dynamic> data, Set<String> params) =>

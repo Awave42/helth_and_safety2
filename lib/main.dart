@@ -6,8 +6,8 @@ import 'auth/firebase_user_provider.dart';
 import 'auth/auth_util.dart';
 import 'backend/push_notifications/push_notifications_util.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
+import 'package:ohrana_truda_2/login/login_widget.dart';
 import 'package:ohrana_truda_2/sign/sign_widget.dart';
-import 'package:ohrana_truda_2/home_page/home_page_widget.dart';
 import 'flutter_flow/flutter_flow_theme.dart';
 
 void main() async {
@@ -64,8 +64,8 @@ class _MyAppState extends State<MyApp> {
               ),
             )
           : currentUser.loggedIn
-              ? PushNotificationsHandler(child: HomePageWidget())
-              : SignWidget(),
+              ? PushNotificationsHandler(child: SignWidget())
+              : LoginWidget(),
     );
   }
 }
