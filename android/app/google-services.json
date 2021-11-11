@@ -1,18 +1,27 @@
 {
   "project_info": {
     "project_number": "935495206929",
+    "firebase_url": "https://health-and-safety-102-default-rtdb.firebaseio.com",
     "project_id": "health-and-safety-102",
     "storage_bucket": "health-and-safety-102.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:935495206929:android:724483c73a244911b749b0",
+        "mobilesdk_app_id": "1:935495206929:android:f4f11e2f8ce948e4b749b0",
         "android_client_info": {
           "package_name": "com.flutterflow.ohranatruda2"
         }
       },
       "oauth_client": [
+        {
+          "client_id": "935495206929-3fj44gvgubmifg792tm9fbioqgqgfp94.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.flutterflow.ohranatruda2",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
         {
           "client_id": "935495206929-p8vhphbn2vns1ca6s43rvic604v3mv6t.apps.googleusercontent.com",
           "client_type": 3

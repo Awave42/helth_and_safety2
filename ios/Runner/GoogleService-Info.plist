@@ -31,6 +31,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:935495206929:ios:3323bc30d3be18d8b749b0</string>
+	<string>1:935495206929:ios:2da54695d928055bb749b0</string>
+	<key>DATABASE_URL</key>
+	<string>https://health-and-safety-102-default-rtdb.firebaseio.com</string>
 </dict>
 </plist>
