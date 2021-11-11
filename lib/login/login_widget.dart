@@ -299,7 +299,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                 setState(() => _loadingButton2 = false);
                               }
                             },
-                            text: 'Login',
+                            text: 'Login12',
                             options: FFButtonOptions(
                               width: 230,
                               height: 60,
